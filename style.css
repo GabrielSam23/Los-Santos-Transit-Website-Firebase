@@ -1,0 +1,667 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: #2c3e50;
+  text-align: center;
+  padding: 20px;
+  color: white;
+  background-image: url('https://imgmd.net/images/v1/guia/1684176/los-angeles-155-c.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.header p {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.nav {
+  background-color: #34495e;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.tab {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+  border-radius: 5px 5px 0 0;
+  cursor: pointer;
+}
+
+.tab:hover {
+  background-color: #2980b9;
+}
+
+.tab.active {
+  background-color: #2c3e50;
+}
+
+.tab-content {
+  display: none;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.content {
+  margin: 20px;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+h2 {
+  color: #0099ff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos específicos para as imagens nas abas */
+#horarios img {
+  transform: rotate(5deg);
+}
+
+#rotas img {
+  transform: rotate(-5deg);
+}
+
+#contato img {
+  transform: rotate(6deg);
+}
+
+#linhas .linha-box {
+  background-color: #ecf0f1;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  text-align: left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#linhas .linha-box h3 {
+  margin-top: 0;
+  color: #3498db;
+}
+
+#linhas .linha-box p {
+  margin: 5px 0;
+}
+
+/* Adicione isso para a área de Rotas */
+#rotas .rota-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+#rotas .rota-tab-link {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#rotas .rota-tab-link:hover {
+  background-color: #2980b9;
+}
+
+#rotas .rota-tab-link.active {
+  background-color: #2c3e50;
+}
+
+#rotas .rota-content {
+  display: none;
+  text-align: left;
+}
+
+#rotas .rota-content.active {
+  display: block;
+}
+
+/* Adicione isso à seção de Rotas */
+#rota-info {
+  display: none;
+}
+
+#rota-info h2 {
+  color: #3498db;
+}
+
+#mapa-rota {
+  width: 50%;
+  height: 200px; /* Ajuste a altura desejada */
+  background-color: #ddd;
+  margin: 20px auto; /* Margens superior e inferior automáticas e centralizadas horizontalmente */
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden; /* Evita que a imagem ultrapasse as bordas do contêiner */
+}
+
+.rota-info-map {
+  width: 100%;
+  height: 300px;
+  background-color: #ddd;
+  margin-top: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#detalhes-rota {
+  text-align: left;
+  margin-top: 20px;
+}
+
+/* Adicione isso para a área de Notícias */
+#newsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#newsContainer .noticia-box {
+  background-color: #ecf0f1;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  text-align: left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 70%;
+}
+
+#newsContainer .noticia-box.active {
+  display: block;
+}
+
+#newsContainer .noticia-box h3 {
+  margin-top: 0;
+  color: #3498db;
+}
+
+#newsContainer .noticia-box p {
+  margin: 5px 0;
+}
+
+.p {
+  font-size: 50px
+}
+
+.contact-us h2,.contact-us .heading-summary {
+  text-align: center
+}
+
+.contact-us input,.contact-us button {
+  display: block
+}
+
+.contact-us input,.contact-us textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ced4da
+}
+
+.contact-us input:focus,.contact-us textarea:focus {
+  outline: none
+}
+
+.contact-us input {
+  margin-bottom: 16px
+}
+
+.contact-us textarea {
+  height: 100px;
+  resize: none
+}
+
+.contact-us form {
+  max-width: 700px;
+  margin: 0 auto
+}
+
+.contact-us .flex-row {
+  flex-direction: column
+}
+
+@media (min-width: 500px) {
+  .contact-us .flex-row {
+      flex-direction:row;
+      gap: 32px
+  }
+}
+
+.contact-us .btn {
+  cursor: pointer;
+  margin-top: 16px;
+  font-weight: 400
+}
+
+.contact-us .btn:hover {
+  color: #007bff;
+  border-color: #007bff
+}
+
+.modal-wrap .modal button:hover {
+  border-color: #007bff;
+  color: #007bff
+}
+
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.login-input {
+  margin-right: 10px;
+}
+
+.logout-btn {
+  margin-right: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  flex: 1;
+}
+
+input[type="text"],
+input[type="email"] {
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.chatbox {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.chatbox-header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.chatbox-body {
+  padding: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.message {
+  margin-bottom: 10px;
+}
+
+.message p {
+  margin: 0;
+}
+
+.message.sent p {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px;
+  border-radius: 8px;
+  text-align: right;
+}
+
+.message.received p {
+  background-color: #f2f2f2;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.chatbox-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.popup-content {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+  width: calc(100% - 40px);
+  z-index: 9998;
+}
+
+     h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  flex: 1;
+}
+
+input[type="text"],
+input[type="email"] {
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.chatbox {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.chatbox-header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.chatbox-body {
+  padding: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.message {
+  margin-bottom: 10px;
+}
+
+.message p {
+  margin: 0;
+}
+
+.message.sent p {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px;
+  border-radius: 8px;
+  text-align: right;
+}
+
+.message.received p {
+  background-color: #f2f2f2;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.chatbox-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.popup-content {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+  width: calc(100% - 40px);
+  z-index: 9998;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  border-radius: 8px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#login-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 1px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
+
+/* Estilo para o menu de configurações */
+/* Estilo para o menu de configurações */
+.settings-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 220px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 12px 0;
+  z-index: 1;
+}
+
+.settings-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.settings-menu li {
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+
+.settings-menu li:hover {
+  background-color: #f5f5f5;
+}
+
+.settings-menu .menu-header {
+  font-size: 1.2em;
+  font-weight: bold;
+  border-bottom: 1px solid #eee;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+}
+
+.settings-menu .menu-item {
+  font-size: 1em;
+  color: #333;
+}
+
+.settings-menu .menu-item .icon {
+  margin-right: 1px;
+}
+
+.settings-menu .arrow-icon {
+  margin-left: auto;
+  transition: transform 0.3s;
+}
+
+.settings-menu .submenu {
+  display: none;
+  padding-left: 20px;
+}
+
+.settings-menu .submenu li {
+  padding: 8px 0;
+}
+
+.settings-menu .submenu.show {
+  display: block;
+}
+
+/* Adicione uma animação sutil ao abrir o submenu */
+.settings-menu .submenu {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.show {
+  display: block;
+}
+
+.small-icon {
+  width: 33px; /* Ajuste o tamanho conforme necessário */
+  height: 33px; /* Ajuste o tamanho conforme necessário */
+  margin-bottom: -20px;
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateX(100%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+      transform: translateX(0);
+  }
+  to {
+      transform: translateX(100%);
+  }
+}
+  
+#successMessage {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #5cb85c;
+  color: #fff;
+  border-radius: 5px;
+  animation: slideIn 0.5s ease-in-out, slideOut 0.5s ease-in-out 2.5s forwards;
+}
+

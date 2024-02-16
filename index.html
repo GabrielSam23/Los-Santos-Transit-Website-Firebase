@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Santos Transit</title>
+    <meta name="description" content="A maior empresa de transporte público de San Andreas. Consulte os horários, rotas e outras informações importantes.">
+    <meta property="og:title" content="Los Santos Transit">
+    <meta property="og:description" content="A maior empresa de transporte público de San Andreas. Consulte os horários, rotas e outras informações importantes.">
+    <meta property="og:url" content="https://seusite.com">
+    <link rel="stylesheet" href="style.css"> <!-- Referência para o arquivo CSS -->
+</head>
+
+<body>
+    <div class="header">
+        <h1>Los Santos Transit</h1>
+        <p>A maior empresa de transporte público de San Andreas.</p>
+    </div>    
+    <div class="nav">
+        <div class="tabs">
+            <a href="#horarios" class="tab active">Horários</a>
+            <a href="#rotas" class="tab">Rotas</a>
+            <a href="#contato" class="tab">Trabalhe conosco</a>
+            <a href="#linhas" class="tab">Linhas</a>
+            <a href="#noticias" class="tab">Notícias</a>
+            <div id="login-container" style="display: none;">
+                <h1>Login</h1>
+                <form id="login-form">
+                    <input type="email" id="email-login" placeholder="Seu Email">
+                    <input type="password" id="senha-login" placeholder="Sua Senha">
+                    <button type="submit">Entrar</button>
+                </form>
+                
+            </div>
+            <div class="logoutdj">
+                <button id="login-button" style="display: none;">Login</button>
+            </div>            
+            <!-- Adicione um ícone de engrenagem -->
+        <div id="account-settings">
+            <img src="https://static.thenounproject.com/png/3070444-200.png" id="settings-icon" class="small-icon" alt="Configurações da Conta">
+            <div id="settings-menu" class="settings-menu">
+                <ul>
+                    <li id="logout-option">Deslogar</li>
+        </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>    
+    <div class="content">
+        <div id="horarios" class="tab-content">
+            <h2>Horários</h2>
+            <img src="https://via.placeholder.com/800x400" alt="Horários">
+            <p>Aba de Horários: Consulte abaixo os horários disponíveis para os nossos serviços de transporte público.</p>
+            <ul>
+                <li>Horário 1: 7:00 - 9:00</li>
+                <li>Horário 2: 12:00 - 14:00</li>
+                <li>Horário 3: 18:00 - 20:00</li>
+            </ul>
+        </div>
+        <div id="rotas" class="tab-content" style="display: none;">
+            <h2>Rotas</h2>
+            <img src="https://via.placeholder.com/800x400" alt="Rotas">
+            <p>Aba de Rotas: Confira as diferentes rotas que nossos ônibus seguem para atender às suas necessidades de transporte.</p>
+            <div class="rota-tabs">
+                <a href="#rota1" class="rota-tab-link active" onclick="mostrarInfoRota('rota1')">Rota 1</a>
+                <a href="#rota2" class="rota-tab-link" onclick="mostrarInfoRota('rota2')">Rota 2</a>
+                <a href="#rota3" class="rota-tab-link" onclick="mostrarInfoRota('rota3')">Rota 3</a>
+            </div>
+            <div id="rota1" class="rota-content active">
+                <!-- As informações da Rota 1 serão inseridas aqui -->
+            </div>
+            <div id="rota2" class="rota-content">
+                <!-- As informações da Rota 2 serão inseridas aqui -->
+            </div>
+            <div id="rota3" class="rota-content">
+                <!-- As informações da Rota 3 serão inseridas aqui -->
+            </div>
+            <!-- Adicione a área para mostrar informações da rota -->
+            <div id="rota-info" class="tab-content" style="display: none;">
+                <h2>Informações da Rota</h2>
+                <div class="rota-info-map" id="mapa-rota" style="background-color: #ddd;">Mapa Aqui</div>
+                <div id="detalhes-rota" style="text-align: left; margin-top: 20px;">
+                    <!-- As informações da rota serão exibidas aqui -->
+                </div>
+            </div>
+        </div>
+        <div id="contato" class="tab-content" style="display: none;">
+            <section class="contact-us">
+                <div class="container">
+                    <h2>Candidatar-se a setores</h2>
+                    <p class="heading-summary">-> Vagas Disponíveis (vagas de todos os setores da empresa)</p>
+                    <!-- Adicione um ID ao formulário para referenciá-lo no JavaScript -->
+                    <form id="contactForm" class="contactForm">
+                        <div class="flex-row">
+                            <input class="fullName" type="search" placeholder="Seu nome" required/>
+                            <input class="emailAddress" type="search" placeholder="Seu email (Discord)" required/>
+                        </div>
+                        <input class="subject" type="search" placeholder="Assunto" required/>
+                        <textarea class="message" placeholder="Mensagem" required></textarea>
+                        <!-- Adicione um ID ao botão para referenciá-lo no JavaScript -->
+                        <button id="sendMessageBtn" class="btn submitForm" type="submit">Enviar formulário</button>
+                    </form>
+                    
+                </div>
+            </section>
+        </div>
+        
+        <!-- Adicione isso à seção de Linhas -->
+        <div id="linhas" class="tab-content" style="display: none;">
+            <h2>Linha em Funcionamento</h2>
+            <img src="https://via.placeholder.com/800x400" alt="Linhas">
+            <p>Aba de Linhas: Confira as linhas de transporte público atualmente em funcionamento.</p>
+
+            <!-- Aviso sobre o Discord -->
+            <div class="aviso-discord">
+                <p>Informações dos nossos ônibus em tempo real. Acompanhe o trajeto real dos ônibus através do bot em nosso Discord <a href="https://discord.gg/3kqb7uzq" target="_blank">clicando aqui</a>.</p>
+            </div>
+
+            <!-- Linha 1 -->
+            <div class="linha-box">
+                <h3>Linha 1</h3>
+                <p>Rota: Centro para Zona Sul</p>
+                <p>Status: Ativa</p>
+            </div>
+
+            <!-- Linha 2 -->
+            <div class="linha-box">
+                <h3>Linha 2</h3>
+                <p>Rota: Zona Norte para Centro</p>
+                <p>Status: Inativa</p>
+            </div>
+        </div>
+
+        <!-- Adicione isso para a área de Notícias -->
+        <div id="noticias" class="tab-content" style="display: none;">
+            <h2>Notícias</h2>
+            <div id="newsContainer">
+                <!-- As notícias serão exibidas aqui -->     
+            </div>
+        </div>
+    </div>
+	
+	<div class="popup-content" id="popup-content">
+        <h1>Criar Chatbox</h1>
+        <form id="create-chatbox-form">
+            <input type="text" id="nome-input" placeholder="Assunto">
+            <!-- Removido o campo de email -->
+            <button type="submit">Criar Chatbox</button>
+        </form>
+        <div id="chatbox-container"></div>
+    </div>
+    
+	
+	<div class="chatbox-popup" id="chatbox-popup">
+        <span style="font-size: 24px;">&#x1F4AC;</span>
+        
+    </div>
+
+    <div class="success-message" id="successMessage">
+        Mensagem enviada com sucesso!
+    </div>
+    
+
+    <!-- Adicione um ícone de engrenagem -->
+<!-- Adicione um ícone de engrenagem -->
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
